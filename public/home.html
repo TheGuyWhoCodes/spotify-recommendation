@@ -2,19 +2,47 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href = "../node_modules/normalize.css/normalize.css">
-        <link rel="stylesheet" href = "css/style.css">
+        <link rel="stylesheet" href = "/css/normalize.css">
+        <link rel="stylesheet" href = "/css/style.css">
         <script src="https://kit.fontawesome.com/32907d7ab3.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     </head>
 
     <body>
         <div class = "hero">
-            <h2 class = "header-text">an album a day</h2><br>
-            <button class = "login-button">
+            <h2 class = "header-text">new for you</h2><br>
+            <h5 class = "sub-text">new albums found just for you</h5><br>
+            <a href = "/login" class = "login-button">
                 <i class="fab fa-spotify"></i>
                 Login with Spotify
             </button>
         </div>
     </body>
+    <script id="user-profile-template" type="text/x-handlebars-template">
+        <h1>Logged in as {{display_name}}</h1>
+        <div class="media">
+          <div class="pull-left">
+            <img class="media-object" width="150" src="{{images.0.url}}" />
+          </div>
+          <div class="media-body">
+            <dl class="dl-horizontal">
+              <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
+              <dt>Id</dt><dd>{{id}}</dd>
+              <dt>Email</dt><dd>{{email}}</dd>
+              <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
+              <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
+              <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
+              <dt>Country</dt><dd>{{country}}</dd>
+            </dl>
+          </div>
+        </div>
+      </script>
+  
+      <script id="oauth-template" type="text/x-handlebars-template">
+        <h2>oAuth info</h2>
+        <dl class="dl-horizontal">
+          <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+          <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
+        </dl>
+      </script>
 </html>

@@ -15,7 +15,9 @@
     margin-top: 1.2em;
 }
 .sub-text {
-    margin-top:.5em;
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: -2.8em;
 }
 
 .login-hero {
@@ -41,4 +43,5 @@
     font-size:1.6em;
     font-family: 'Josefin Sans', sans-serif;
     border-radius: 12px;
+    text-decoration: none;
 }
